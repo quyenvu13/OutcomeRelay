@@ -1,0 +1,8 @@
+{
+  "domain": "rural-clinic urgent referrals",
+  "original_duty": "Maintain a staffed overnight triage line for rural clinics.",
+  "protected_outcome": "Urgent referral requests from rural clinics reach a licensed clinician within ten minutes at all hours.",
+  "preserving_candidate": "Whenever a rural clinic flags an urgent referral, an accredited practitioner returns contact within six hundred seconds, regardless of hour.",
+  "inadequate_candidate": "Provide a 24/7 urgent referral portal for rural clinics that promises ten-minute automated acknowledgements but no licensed-clinician contact.",
+  "anti_drift_candidate": "Forward requests to a daytime scheduling queue for review during weekday office hours."
+}

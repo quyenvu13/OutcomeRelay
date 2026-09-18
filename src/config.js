@@ -1,0 +1,9 @@
+export const PROJECT_NAME = 'OutcomeRelay'
+export const CONTRACT_CLASS = 'SubstituteDuty'
+export const CONTRACT_VERSION = '1.1'
+export const CONTRACT_ADDRESS = '0x7b0F25B38f590564ebB7a814444cD85067f767CC'
+export const SOURCE_SHA256 = '358f4821dd72956e77ab3355e4e213a2db0ae9a7cf05b4b83fabde8b99c82e47'
+export const EXPLORER_BASE = 'https://explorer-studio.genlayer.com'
+export const CONTRACT_EXPLORER_URL = `${EXPLORER_BASE}/address/${CONTRACT_ADDRESS}`
+export const STUDIO_CHAIN_ID = 61999
+export const UI_TEXT_SOFT_CAP = 150

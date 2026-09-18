@@ -1,0 +1,21 @@
+{
+  "name": "outcome-relay",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build && node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs && npm run test:contract",
+    "test:contract": "node scripts/run-python-tests.mjs",
+    "verify:deployed": "node tools/verify-deployed.mjs",
+    "runtime:read": "node tools/runtime-read.mjs",
+    "verify": "npm test && npm run build"
+  },
+  "dependencies": {
+    "genlayer-js": "1.1.8"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.10"
+  }
+}

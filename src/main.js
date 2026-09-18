@@ -394,7 +394,15 @@ async function handleAudit(event) {
   state.obligationId = Number(data.get('obligationId')); state.auditFrom = Number(data.get('fromId')); state.auditCount = Number(data.get('count'))
   localStorage.setItem('outcomeRelay.obligationId', state.obligationId)
   state.busy = 'Loading ledger…'; render()
-  try { state.attempts = await readAttempts(state.obligationId, state.auditFrom, state.auditCount) }
+  try {
+    const summaries = await readAttempts(state.obligationId, state.auditFrom, state.auditCount)
+    // The paginated contract view intentionally returns compact summaries.
+    // Hydrate each row from get_attempt so the reviewer can inspect the
+    // proposer and exact substitute text without fabricating UI data.
+    state.attempts = await Promise.all(
+      summaries.map((item) => readAttempt(state.obligationId, item.attempt_id)),
+    )
+  }
   catch (error) { state.notice = { kind: 'error', title: 'Attempt ledger read failed', message: cleanError(error) }; state.attempts = [] }
   state.busy = ''; render()
 }

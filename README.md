@@ -6,6 +6,7 @@ The product changes the active duty only after semantic consensus returns `SUBST
 
 ## Live deployment
 
+- **Live app: <https://outcome-relay.vercel.app>**
 - Project: `OutcomeRelay`
 - Network: GenLayer StudioNet (`61999`)
 - Project contract: `0x7b0F25B38f590564ebB7a814444cD85067f767CC`
@@ -42,7 +43,7 @@ Open `http://127.0.0.1:4173`.
 
 ## Vercel
 
-Import the repository as a Vercel project. `vercel.json` declares the build command, `dist` output and StudioNet RPC proxy. No environment variable is required for the public deployment.
+The public deployment is at <https://outcome-relay.vercel.app>. `vercel.json` declares the build command, the `dist` output directory and the StudioNet RPC proxy at `/api/rpc`. No environment variable is required. To run your own copy, import the repository as a Vercel project.
 
 ## Contract boundary
 

@@ -41,6 +41,8 @@ Expected evidence:
 
 ## Reviewer flow
 
+0. Open <https://outcome-relay.vercel.app>. No install, environment variable or local build is required for this flow.
+
 Use two distinct StudioNet wallets. Do not use a single wallet for both roles.
 
 1. Connect wallet A (obligor).
@@ -57,6 +59,25 @@ Use two distinct StudioNet wallets. Do not use a single wallet for both roles.
 12. Confirm `SUBSTITUTE_INADEQUATE`, rejected count advances and the accepted active duty remains unchanged.
 13. Open **Attempt ledger** and confirm both attempts appear in order with verdict source.
 14. Open **Verification** and compare address, class, version and source hash.
+
+## Live deployment verification
+
+Observed against <https://outcome-relay.vercel.app> on 2026-09-24:
+
+```text
+200  /
+200  /assets/main.js
+200  /assets/styles.css
+200  /favicon.svg
+```
+
+The same-origin StudioNet proxy returned a valid JSON-RPC response:
+
+```json
+{"jsonrpc":"2.0","result":"0xf22f","id":1}
+```
+
+`0xf22f` is chain ID `61999`.
 
 ## Transaction truth
 

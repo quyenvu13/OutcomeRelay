@@ -7,6 +7,5 @@ await build({ entryPoints: ['src/main.js'], bundle: true, minify: true, sourcema
 await cp('src/styles.css', 'dist/assets/styles.css')
 await cp('OutcomeRelay-logo.svg', 'dist/OutcomeRelay-logo.svg')
 await cp('favicon.svg', 'dist/favicon.svg')
-await cp('vercel.json', 'dist/vercel.json')
 await writeFile('dist/index.html', await readFile('index.html', 'utf8'))
 console.log('OutcomeRelay production build created in dist/.')

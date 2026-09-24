@@ -15,6 +15,14 @@ Expected result:
 - 9 direct Python contract tests pass.
 - The production bundle is created in `dist/`.
 
+Observed locally on 2026-09-24 after the Vercel packaging correction:
+
+- `npm ci`: rc 0, 222 packages installed.
+- Node tests: 20 passed, 0 failed.
+- Direct Python contract tests: 9 passed, 0 failed.
+- `npm run build`: rc 0.
+- `dist/` contains the app assets and no copied `vercel.json`; deployment configuration remains at the repository root.
+
 Verify the live Project deployment from Windows CMD:
 
 ```cmd
